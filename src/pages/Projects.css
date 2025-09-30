@@ -1,0 +1,239 @@
+.projects-page {
+    padding: 2rem 50px;
+    min-height: 100vh;
+    color: #333;
+
+    /* Smooth gradient background */
+    background: radial-gradient(circle at top left, #ffe6cc, transparent 40%),
+        radial-gradient(circle at top right, #ccf2ff, transparent 40%),
+        radial-gradient(circle at bottom left, #e0ccff, transparent 40%),
+        radial-gradient(circle at bottom right, #ffd6e7, transparent 40%);
+    background-color: #fdfdfd;
+    position: relative;
+}
+
+.projects-page.dark {
+    background: radial-gradient(circle at top left, #333, transparent 40%),
+        radial-gradient(circle at top right, #222, transparent 40%),
+        radial-gradient(circle at bottom left, #444, transparent 40%),
+        radial-gradient(circle at bottom right, #111, transparent 40%);
+    background-color: #000;
+    color: #eee;
+}
+
+/* Project Title */
+.projects-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Project Card */
+.project-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 5px solid transparent;
+    background-clip: padding-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    border: 5px solid #ff8a00;
+    /* glowing border on hover */
+}
+
+.project-card.dark {
+    background: rgba(34, 34, 34, 0.8);
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    color: #eee;
+}
+
+.project-card.dark:hover {
+    border: 5px solid #e52e71;
+}
+
+/* Project Content */
+.project-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    flex-grow: 1;
+    margin-bottom: 0.8rem;
+}
+
+/* Tech Stack */
+.tech-stack {
+    margin-bottom: 1rem;
+}
+
+.tech-item {
+    background: linear-gradient(90deg, #ffecd2, #fcb69f);
+    color: #333;
+    padding: 0.3rem 0.7rem;
+    margin-right: 0.3rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.project-card.dark .tech-item {
+    background: linear-gradient(90deg, #434343, #000000);
+    color: #eee;
+}
+
+/* Buttons */
+.project-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.6rem;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.website-btn {
+    background-color: #007bff;
+}
+
+.website-btn:hover {
+    background-color: #0056b3;
+}
+
+.app-btn {
+    background-color: #28a745;
+}
+
+.app-btn:hover {
+    background-color: #1e7e34;
+}
+
+.github-btn {
+    background-color: #343a40;
+}
+
+.github-btn:hover {
+    background-color: #212529;
+}
+
+.more-btn {
+    background-color: #fd7e14;
+}
+
+.more-btn:hover {
+    background-color: #e8590c;
+}
+
+/* Carousel Image */
+.carousel-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-carousel .carousel .control-arrow,
+.project-carousel .carousel.carousel-slider .control-arrow {
+    opacity: 0.7;
+}
+
+
+
+/* Buttons Grid */
+.project-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 buttons per row */
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* Base Button */
+.btn {
+    padding: 0.7rem;
+    text-align: center;
+    border-radius: 50px;
+    /* fully rounded */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient Styles */
+.website-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.website-btn:hover {
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+    transform: scale(1.05);
+}
+
+.app-btn {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.app-btn:hover {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    transform: scale(1.05);
+}
+
+.github-btn {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
+.github-btn:hover {
+    background: linear-gradient(135deg, #1c1c1c, #333);
+    transform: scale(1.05);
+}
+
+.more-btn {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.more-btn:hover {
+    background: linear-gradient(135deg, #e65c00, #ff3333);
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+    .projects-page {
+        padding: 2rem 10px;
+    }
+
+}
