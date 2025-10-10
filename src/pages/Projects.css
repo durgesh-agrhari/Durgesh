@@ -89,6 +89,9 @@
 /* Tech Stack */
 .tech-stack {
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+    margin: 5px;
+    margin-top: 10px;
 }
 
 .tech-item {
@@ -204,11 +207,11 @@
 }
 
 .app-btn {
-    background: linear-gradient(135deg, #56ab2f, #a8e063);
+    background: linear-gradient(135deg, #3f888b, #415371);
 }
 
 .app-btn:hover {
-    background: linear-gradient(135deg, #4caf50, #81c784);
+    background: linear-gradient(135deg, #2e383a, #81c784);
     transform: scale(1.05);
 }
 
@@ -222,11 +225,11 @@
 }
 
 .more-btn {
-    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    background: linear-gradient(135deg, #3b5076, #545e8e);
 }
 
 .more-btn:hover {
-    background: linear-gradient(135deg, #e65c00, #ff3333);
+    background: linear-gradient(135deg, #2f604a, #7e94cb);
     transform: scale(1.05);
 }
 
@@ -236,4 +239,71 @@
         padding: 2rem 10px;
     }
 
+}
+
+/* Buttons Grid */
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Base Button */
+.btn {
+    padding: 0.4rem 0.8rem; /* smaller padding */
+    text-align: center;
+    border-radius: 6px; /* slightly rounded */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease-in-out;
+    flex: 1; /* make buttons stretch equally */
+    min-width: 100px; /* ensure small buttons don’t shrink too much */
+}
+
+/* Single Color Buttons */
+.website-btn {
+    background-color: #007bff97;
+}
+
+.website-btn:hover {
+    background-color: #0057b363;
+}
+
+.app-btn {
+    background-color: #1f6687b2;
+}
+
+.app-btn:hover {
+    background-color: #4899a4c4;
+}
+
+.github-btn {
+    background-color: #343a40;
+}
+
+.github-btn:hover {
+    background-color: #212529;
+}
+
+.more-btn {
+    background-color: #fd7e14;
+}
+
+.more-btn:hover {
+    background-color: #e8590c;
+}
+
+/* Responsive: make buttons full width on small screens */
+@media screen and (max-width: 480px) {
+    .project-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        flex: unset;
+        width: 100%;
+    }
 }
